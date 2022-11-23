@@ -9,3 +9,9 @@ Here you can find some software coded in assembly language. For testing this cod
   Here a preview:
   
   ![02_wagon.gif](doc/02_wagon.gif)
+
+- [03_wagon.asm](03_wagon.asm) is the same as [02_wagon.asm](02_wagon.asm) but a row of barrels are added, you can stop the wagon pressing a configurable key, by default the stop key is the space. If you don't press the stop key, the wagon will stop just before the first barrel.
+
+  Here a preview:
+  
+  ![03_wagon.gif](doc/03_wagon.gif)
