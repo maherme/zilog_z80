@@ -1,3 +1,5 @@
+# Machine Code Examples
+
 Here you can find some software coded in machine code, for testing this code you can copy it and paste it in the memory map of the processor system. If you use WinAPE emulator, you can open the debug window (F7) and paste the code from address 0x4000. Remember to set the program counter of the processor to this address in order to execute the code before close the debug window.
 
 This is a code for printing a simple tile, this can be used for printing a ground:
@@ -18,35 +20,35 @@ This is a code for printing a ground and a sky:
 This is a code for printing a cowboy (8x8 pixels):
 
 - Here the cowboy without firing:
-```
-21 50 C0 36 70 2C 36 80 26 C8 36 00 2D 36 D5 26 D0 36 77 2C 36 08 26 D8 36 88 2D 36 05 26 E0 36 07 2C 36 88 26 E8 36 88 2D 36 70 26 F0 36 40 2C 36 80 26 F8 36 C0 2D 36 60 18 FE
-```
+  ```
+  21 50 C0 36 70 2C 36 80 26 C8 36 00 2D 36 D5 26 D0 36 77 2C 36 08 26 D8 36 88 2D 36 05 26 E0 36 07 2C 36 88 26 E8 36 88 2D 36 70 26 F0 36 40 2C 36 80 26 F8 36 C0 2D 36 60 18 FE
+  ```
 - Here the cowboy firing:
-```
-21 50 C0 36 70 2C 36 80 26 C8 36 00 2D 36 D5 26 D0 36 77 2C 36 08 26 D8 36 7F 2D 36 05 26 E0 36 06 2C 36 04 26 E8 36 80 2D 36 70 26 F0 36 40 2C 36 80 26 F8 36 C0 2D 36 60 18 FE
-```
+  ```
+  21 50 C0 36 70 2C 36 80 26 C8 36 00 2D 36 D5 26 D0 36 77 2C 36 08 26 D8 36 7F 2D 36 05 26 E0 36 06 2C 36 04 26 E8 36 80 2D 36 70 26 F0 36 40 2C 36 80 26 F8 36 C0 2D 36 60 18 FE
+  ```
 
 - Here the cowboy celebrating victory:
-```
-21 50 C0 36 30 2C 36 C0 26 C8 36 B9 2D 36 E8 26 D0 36 3B 2C 36 EF 26 D8 36 47 2D 36 1F 26 E0 36 03 2C 36 0E 26 E8 36 E0 2D 36 30 26 F0 36 30 2C 36 60 26 F8 36 60 2D 36 30 10 FE
-```
+  ```
+  21 50 C0 36 30 2C 36 C0 26 C8 36 B9 2D 36 E8 26 D0 36 3B 2C 36 EF 26 D8 36 47 2D 36 1F 26 E0 36 03 2C 36 0E 26 E8 36 E0 2D 36 30 26 F0 36 30 2C 36 60 26 F8 36 60 2D 36 30 10 FE
+  ```
 
 This is a code for printing some enemies (8x8 pixels):
 
 - Here the enemy 1:
-```
-21 9E C0 36 23 2C 36 0C 26 C8 36 48 2D 36 01 26 D0 36 00 2C 36 41 26 D8 36 F0 2D 36 FF 26 E0 36 10 2C 36 E8 26 E8 36 C0 2D 36 00 26 F0 36 00 2C 36 0C 26 F8 36 02 2D 36 01 18 FE
-```
+  ```
+  21 9E C0 36 23 2C 36 0C 26 C8 36 48 2D 36 01 26 D0 36 00 2C 36 41 26 D8 36 F0 2D 36 FF 26 E0 36 10 2C 36 E8 26 E8 36 C0 2D 36 00 26 F0 36 00 2C 36 0C 26 F8 36 02 2D 36 01 18 FE
+  ```
 
 - Here the enemy 2:
-```
-21 9E C0 36 23 2C 36 AE 26 C8 36 E1 2D 36 34 26 D0 36 71 2C 36 F4 26 D8 36 F6 2D 36 73 26 E0 36 70 2C 36 F0 26 E8 36 BC 2D 36 61 26 F0 36 30 2C 36 E0 26 F8 36 03 2D 36 06 18 FE
-```
+  ```
+  21 9E C0 36 23 2C 36 AE 26 C8 36 E1 2D 36 34 26 D0 36 71 2C 36 F4 26 D8 36 F6 2D 36 73 26 E0 36 70 2C 36 F0 26 E8 36 BC 2D 36 61 26 F0 36 30 2C 36 E0 26 F8 36 03 2D 36 06 18 FE
+  ```
 
 - Here the enemy 3:
-```
-21 9E C0 36 80 2C 36 80 26 C8 36 EC 2D 36 50 26 D0 36 F5 2C 36 D4 26 D8 36 EE 2D 36 77 26 E0 36 F5 2C 36 FB 26 E8 36 F9 2D 36 74 26 F0 36 FF 2C 36 FF 26 F8 36 3F 2D 36 EF 18 FE
-```
+  ```
+  21 9E C0 36 80 2C 36 80 26 C8 36 EC 2D 36 50 26 D0 36 F5 2C 36 D4 26 D8 36 EE 2D 36 77 26 E0 36 F5 2C 36 FB 26 E8 36 F9 2D 36 74 26 F0 36 FF 2C 36 FF 26 F8 36 3F 2D 36 EF 18 FE
+  ```
 
 This is a code for printing an animated explosion (4x4 pixels):
 ```
