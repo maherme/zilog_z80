@@ -15,3 +15,9 @@ Here you can find some software coded in assembly language. For testing this cod
   Here a preview:
   
   ![03_wagon.gif](doc/03_wagon.gif)
+
+- [04_wagon.asm](04_wagon.asm) is the same as [03_wagon.asm](03_wagon.asm) but if you don't stop the wagon just before the first barrel, an explosion will happen. If you avoid the crash, the wagon will move faster the next round, if not, the wagon will move slower.
+
+  Here a preview:
+  
+  ![04_wagon.gif](doc/04_wagon.gif)
