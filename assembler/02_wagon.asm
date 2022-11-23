@@ -15,6 +15,8 @@ initial_position_wagon: dw #C410
 position_wagon: dw #C410
 position_rail: dw #C460
 speed_wagon: db 12  ;; number of halts cycles to wait before wagon is moved
+start_brake1: db -30 ;; number of positions before starting brake, must be negative (counting from end)
+start_brake2: db -10 ;; number of positions before second brake, must be negative (counting from end)
 
 init:
 ld hl, (initial_position_wagon)
@@ -30,6 +32,7 @@ loop_draw:
     ld hl, (position_wagon)
     inc hl
     ld (position_wagon), hl
+    call check_brake
     dec c
     jr nz, loop_draw
 call print_wagon
@@ -169,7 +172,7 @@ wait_start_key:
     check_start_key:
         ld a, (key_start)
         call #BB1E      ;; KM_TEST_KEY
-        jr nz, continue
+        jr nz, continue_wait_start_key
         ld a, (key_speed1)
         call #BB1E      ;; KM_TEST_KEY
         jr nz, set_speed1
@@ -183,13 +186,34 @@ wait_start_key:
     set_speed1:
     ld a, 12
     ld (speed_wagon), a
-    jr continue
+    jr continue_wait_start_key
     set_speed2:
     ld a, 6
     ld (speed_wagon), a
-    jr continue
+    jr continue_wait_start_key
     set_speed3:
     ld a, 2
     ld (speed_wagon), a
-    continue:
+    continue_wait_start_key:
+    ret
+
+;; Routine for checking when the wagon start braking
+check_brake:
+    ld a, (start_brake1)
+    add a, c
+    jr z, set_brake1
+    ld a, (start_brake2)
+    add a, c
+    jr z, set_brake2
+    jr continue_check_brake
+    set_brake2:
+    ld a, (speed_wagon)
+    add a, 12
+    ld (speed_wagon), a
+    jr continue_check_brake
+    set_brake1:
+    ld a, (speed_wagon)
+    add a, 4
+    ld (speed_wagon), a
+    continue_check_brake:
     ret
